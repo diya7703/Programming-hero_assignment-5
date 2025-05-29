@@ -1,11 +1,11 @@
 // Handle individual task completion
-function CompleteButton(buttonId, taskId) {
-  const button = document.getElementById(buttonId);
-  const task = document.getElementById(taskId);
+  function CompleteButton(buttonId, taskId) {
+     const button = document.getElementById(buttonId);
+     const task = document.getElementById(taskId);
 
-  if (!button || !task) return;
+     if (!button || !task) return;
 
-  button.addEventListener("click", function () {
+     button.addEventListener("click", function () {
     alert("Board Updated Successfully");
 
     // Disable button
@@ -13,14 +13,14 @@ function CompleteButton(buttonId, taskId) {
     button.classList.add("opacity-50", "cursor-not-allowed");
 
     // Update counts
-    const taskCountEl = document.getElementById("assigned-task-count");
-    const navbarCountEl = document.getElementById("completed-task-count");
+    const assignedTaskCount = document.getElementById("assigned-task-count");
+    const completedTaskCount = document.getElementById("completed-task-count");
 
-    let currentTask = parseInt(taskCountEl.textContent);
-    let currentNavbar = parseInt(navbarCountEl.textContent);
+    let currentTask = parseInt(assignedTaskCount.textContent);
+    let currentcompleteTask = parseInt(completedTaskCount.textContent);
 
-    taskCountEl.textContent = currentTask > 0 ? currentTask - 1 : 0;
-    navbarCountEl.textContent = currentNavbar + 1;
+    assignedTaskCount.textContent = currentTask > 0 ? currentTask - 1 : 0;
+    completedTaskCount.textContent = currentcompleteTask + 1;
 
     // Add activity log entry
     const activityLog = document.getElementById("activity-log");
