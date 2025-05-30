@@ -33,7 +33,7 @@
                     <span class="text-cyan-950  font-bold font-['Poppins'] tracking-wide">Board</span>
                 </div>
             </div>
-            <button class=" px-5 py-2.5 bg-blue-600 rounded-lg justify-center items-center gap-2.5 text-white">Back To
+            <button id="back-btn" class=" px-5 py-2.5 bg-blue-600 rounded-lg justify-center items-center gap-2.5 text-white">Back To
                 Desk</button>
         </div>
     </nav>
@@ -98,6 +98,13 @@
         </div>
 
     </div>
+    <script>
+        document.getElementById('back-btn').addEventListener('click',
+    function(event){
+        window.location.href="index.html"
+    }
+)
+    </script>
 </body>
 
 </html>

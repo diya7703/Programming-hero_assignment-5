@@ -38,7 +38,7 @@
                    <img class="w-6 h-6" src="assets/checkbox.png">
                     <div id="completed-task-count" class="w-14 h-7 text-center justify-center text-stone-900 text-2xl font-bold ">23</div>
                 </div>
-                <button> <img src="assets/theme-btn.png"></img></button>
+                <button id="theme-btn"> <img src="assets/theme-btn.png"></button>
             </div>
         </div>
     </nav>
@@ -62,7 +62,7 @@
                     <div
                         class="flex bg-gradient-to-br from-blue-600 via-indigo-400 to-indigo-300 text-white p-4 rounded-lg shadow items-center justify-center text-xl font-semibold">
                         <img class="w-12 h-12" src="assets/board.png">
-                        <div class="">Discover Something New Today!</div>
+                        <button id="discover-btn" class="">Discover Something New Today!</button>
                     </div>
                     <div class="bg-violet-50 rounded-xl p-4  shadow flex items-center justify-center gap-4">
                         <img src="assets/calender.png">
@@ -167,7 +167,16 @@
             </div>
         </div>
     </div>
-<script src="dev.js"></script>
+<script src="script/dev.js"></script>
+<script src="script/theme.js"></script>
+
+<script>
+    document.getElementById('discover-btn').addEventListener('click',
+    function(event){
+        window.location.href="blogs.html"
+    }
+)
+</script>
 </body>
 
 </html>
